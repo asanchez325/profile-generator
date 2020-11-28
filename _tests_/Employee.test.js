@@ -8,7 +8,6 @@ test ('create an employee object', ()=> {
     expect(employee.name).toBe(employee.name);
     expect(employee.id).toBe(employee.id);
     expect(employee.email).toBe(employee.email);
-    expect(employee.role).toBe(employee.role);
 });
 
 //tests get employee info
@@ -28,8 +27,5 @@ test ('get employee email', () => {
     expect(employee.getEmail()).toBe(employee.email);
 });
 
-test ('get employee role', () => {
-    const employee = new Employee('Alannah');
-    expect(employee.getRole()).toEqual(employee.role);
-});
+
 
