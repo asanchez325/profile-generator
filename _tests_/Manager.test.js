@@ -4,11 +4,11 @@ const Employee = require('../lib/Employee')
 
 test ('create a manager object', ()=> {
     const manager = new Manager ('Alannah', '33', 'amsanchez@knox.edu', '45');
-    expect(manager.Office).toBe(manager.Office);
+    expect(manager.office).toBe(manager.office);
 });
 
 //tests get manager info
-test ('get manager office #', () => {
+test ('get manager office', () => {
     const manager = new Manager ('Alannah', '33', 'amsanchez@knox.edu', '45');
     expect(manager.getOffice()).toBe(manager.office);
 });

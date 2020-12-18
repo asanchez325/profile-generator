@@ -8,9 +8,43 @@ const createManager = manager => {
         <h2>${manager.getRole()}</h2>
     </div>
     <div class="body">
-        <li class="employeeInfo">ID: ${manager.getID()}</li>
+        <li class="employeeInfo">ID: ${manager.getId()}</li>
         <li class="employeeInfo"><a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-        <li class="employeeInfo">Office Number: ${manager.getOfficeNumber()}</li>
+        <li class="employeeInfo">Office Number:${manager.getOffice()}</li>
+    </div>
+</div>
+`
+};
+
+const createEngineer = engineer => {
+    console.log(engineer.getName());
+    return `
+<div class="card"> 
+    <div class="header">
+        <h1>${engineer.getName()}</h1>
+        <h2>${engineer.getRole()}</h2>
+    </div>
+    <div class="body">
+        <li class="employeeInfo">ID: ${engineer.getId()}</li>
+        <li class="employeeInfo"><a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+        <li class="employeeInfo">Office Number: ${engineer.getGithub()}</li>
+    </div>
+</div>
+`
+};
+
+const createIntern = intern => {
+    console.log(intern.getName());
+    return `
+<div class="card"> 
+    <div class="header">
+        <h1>${intern.getName()}</h1>
+        <h2>${intern.getRole()}</h2>
+    </div>
+    <div class="body">
+        <li class="employeeInfo">ID: ${intern.getId()}</li>
+        <li class="employeeInfo"><a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+        <li class="employeeInfo">Office Number: ${intern.getSchool()}</li>
     </div>
 </div>
 `
@@ -20,6 +54,15 @@ const createHTML = [];
 createHTML.push(profile.filter(employee=> employee.getRole() === "Manager")
 .map(manager => createManager (manager))
 );
+
+createHTML.push(profile.filter(employee=> employee.getRole() === "Engineer")
+.map(engineer => createEngineer (engineer))
+);
+
+createHTML.push(profile.filter(employee=> employee.getRole() === "Intern")
+.map(intern => createIntern (intern))
+);
+
 
 return createHTML.join("");
 
