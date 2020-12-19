@@ -89,7 +89,7 @@ return `
     </head>
     <body>
         <header class="jumbotron">
-            <h1>my team profile</h1>
+            <h1>Team Profile Generator</h1>
         </header>
         <div class="container">
         <div class="row">
