@@ -5,59 +5,63 @@
         <meta charset="utf-8" />
         <title>Profile Generator</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="../dist/style.css" />
     </head>
     <body>
-        <header>
-            <h1>TEAM PROFILE</h1>
+        <header class="jumbotron">
+            <h1>my team profile</h1>
         </header>
-        <div>
-            <div class="card-section">
+        <div class="container">
+        <div class="row">
+            <div class="team-area col-12 d-flex justify-content-center">
                 
-<div class="card">
-<div class="card-manager">
-        <div class="card-role">
-            <h2>Manager</h2> 
-        </div>
-        <div class="card-content">
-            <h1>n</h1>
-            <li class="employeeInfo">ID: r</li>
-            <li class="employeeInfo"><a href="mailto:e">e</a></li>
-            <li class="employeeInfo">Office Number:w</li>
-         </div>
+<div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-role-manager">Manager</h2> 
+        <h1>Edwina</h1>
     </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 4934304</li>
+            <li class="list-group-item"><a href="mailto:edwina@gmail.com">edwina@gmail.com</a></li>
+            <li class="list-group-item">Office Number: 543</li>
+        </ul>
     </div>
-
-<div class="card">
-<div class="card-engineer">
-        <div class="card-role">
-            <h2>Engineer</h2>
-        </div>
-    <div class="card-content">
-        <h1>w</h1>
-        <li class="employeeInfo">ID: e</li>
-        <li class="employeeInfo"><a href="mailto:f">f</a></li>
-        <li class="employeeInfo">Office Number: v</li>
-    </div>
-</div>
 </div>
 
-<div class="card">
-<div class="card-intern">
-    <div class="card-role">
-            <h2>Intern</h2>
-        </div>
-        <div class="card-content">
-            <h1>d</h1>
-            <li class="employeeInfo">ID: s</li>
-            <li class="employeeInfo"><a href="mailto:a">a</a></li>
-            <li class="employeeInfo">Office Number: eg</li>
-        </div>
+<div class="card employee-card">
+<div class="card-header">
+    <h2 class="card-role-engineer">Engineer</h2>  
+    <h1>Alannah</h1>
+</div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: 435302</li>
+             <li class="list-group-item"><a href="mailto:alannah@gmail.com">alannah@gmail.com</a></li>
+             <li class="list-group-item">GitHub: lanna343</li>
+        </ul>
     </div>
 </div>
+
+<div class="card employee card">
+<div class="card-header">
+    <h2 class="card-role-intern">Intern</h2>
+    <h1>Jon</h1>
+</div>
+<div class="card-body">
+    <ul class="list-group">
+            <li class="list-group-item">ID: 24432323</li>
+            <li class="list-group-item"><a href="mailto:jon@gmail.com">jon@gmail.com</a></li>
+            <li class="list-group-item">Intern's School: Adam State</li>
+        </ul>
+    </div>
 </div>
 
             </div>
         </div>  
+        </div>
+        <footer class="jumbotron"> Vision + Our Team = Excellence </footer>
     </body>
 </html>

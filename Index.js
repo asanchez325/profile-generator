@@ -13,13 +13,13 @@ const promptManager = () => {
 //Manager Name
     type: "input",
     name: "name",
-    message: "Who is your team manager?",
+    message: "What is your team manager's name:?",
        validate: nameInput => {
             if(nameInput) {
                 return true;
             }
             else { 
-                console.log("Please enter your team manager's name");
+                console.log("This is a required field; please insert manager's name!");
                 return false;
                 }
             }
@@ -28,13 +28,13 @@ const promptManager = () => {
     {
     type: "input",
     name: "id",
-    message: "Enter Manager's Employee ID",
+    message: "Enter Manager's Employee ID:",
         validate: employeeID => {
             if(employeeID) {
                 return true;
             }
             else {
-                console.log ("Please enter the team manager's id");
+                console.log ("This is a required field; Please Insert Manager's Employee ID!");
                     return false;
                 }
             }
@@ -43,12 +43,12 @@ const promptManager = () => {
     {
     type: "input",
     name: "email",
-    message: "Enter manager's email address.",
+    message: "Enter Manager's Email Address:",
         validate: employeeEmail => {
             if (employeeEmail) {
                 return true;
             } else {
-                console.log("Please enter the team manager's email address");
+                console.log("This is a required field; Please Insert Manager's Emmail Adress!");
                     return false;
                 }
             }
@@ -57,12 +57,12 @@ const promptManager = () => {
     {
     type: "input",
     name: "office",
-    message: "Enter team manager's office number",
+    message: "Enter Mnager's Office Number:",
         validate: managerOffice => {
             if(managerOffice) {
                 return true;
             }else {
-                console.log("Please enter the team manager's office number");
+                console.log("This is a required field; Please Insert Manager's Office Number!");
                         return false;
                     }
                 }
@@ -85,13 +85,13 @@ const promptEngineer = () => {
 //Engineer Name
     type: "input",
     name: "name",
-    message: "What is the Engineers name?",
+    message: "What is the Engineers name?:",
        validate: nameInput => {
             if(nameInput) {
                 return true;
             }
             else { 
-                console.log("Please enter your engineer's name");
+                console.log("This is a required field; Please Insert Engineers Name!");
                 return false;
                 }
             }
@@ -100,13 +100,13 @@ const promptEngineer = () => {
     {
     type: "input",
     name: "id",
-    message: "Enter Engineer's Employee ID (Numericle Value Required)",
+    message: "Enter Engineer's Employee ID:",
         validate: employeeID => {
             if(employeeID) {
                 return true;
             }
             else {
-                console.log ("Please enter the engineer's id");
+                console.log ("This is a required field; Please Insert Engineer's Employee ID!");
                     return false;
                 }
             }
@@ -115,12 +115,12 @@ const promptEngineer = () => {
     {
     type: "input",
     name: "email",
-    message: "Enter engineer's email address. (required)",
+    message: "Enter engineer's email address:",
         validate: employeeEmail => {
             if (employeeEmail) {
                 return true;
             } else {
-                console.log("Please enter the team manager's email address");
+                console.log("This is a required field; Please Insert Engineer's Email!");
                     return false;
                 }
             }
@@ -129,12 +129,12 @@ const promptEngineer = () => {
     {
     type: "input",
     name: 'github',
-    message: "Enter Engineer's Github",
+    message: "Enter Engineer's Github:",
         validate: engineerGithub => {
             if(engineerGithub) {
                 return true;
             }else {
-                console.log("Please enter the githubr");
+                console.log("This is a required field; Please Insert Engineer's Github!");
                         return false;
                     }
                 }
@@ -161,13 +161,13 @@ const promptIntern = () => {
 //Intern Name
     type: "input",
     name: "name",
-    message: "What is the Engineers name?",
+    message: "What is the Intern's name?",
        validate: nameInput => {
             if(nameInput) {
                 return true;
             }
             else { 
-                console.log("Please enter your engineer's name");
+                console.log("This is a required field; Please Insert the Intern's name!");
                 return false;
                 }
             }
@@ -176,13 +176,13 @@ const promptIntern = () => {
     {
     type: "input",
     name: "id",
-    message: "Enter Engineer's Employee ID (Numericle Value Required)",
+    message: "Enter Intern's Employee ID:",
         validate: employeeID => {
             if(employeeID) {
                 return true;
             }
             else {
-                console.log ("Please enter the engineer's id");
+                console.log ("This is a required field; Please Insert Intern's Employee ID!");
                     return false;
                 }
             }
@@ -191,12 +191,12 @@ const promptIntern = () => {
     {
     type: "input",
     name: "email",
-    message: "Enter engineer's email address. (required)",
+    message: "Enter Intern's Email Address:",
         validate: employeeEmail => {
             if (employeeEmail) {
                 return true;
             } else {
-                console.log("Please enter the team manager's email address");
+                console.log("This is a required field; Please Insert Intern's Email Address!");
                     return false;
                 }
             }
@@ -205,16 +205,23 @@ const promptIntern = () => {
     {
     type: "input",
     name: 'school',
-    message: "Enter Interns schoolong",
+    message: "Enter Interns School:",
         validate: internSchool => {
             if(internSchool) {
                 return true;
             }else {
-                console.log("Please enter the school");
+                console.log("This is a required field; Please Insert Interns School!");
                         return false;
                     }
                 }
-            }
+            },
+//Add Aditional?
+{
+    type: 'confirm',
+    name: 'confirmAddEmployee',
+    message: 'Would you like to enter another Intern?',
+    default: false
+}
     ])
     
 .then(answers => {
