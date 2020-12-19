@@ -7,6 +7,7 @@
 *Description of the project; including the what, the why and the how:* 
 
 A Node.js command-line application that takes quickly intakes information about employees on a software engineering team and generates an HTML webpage of the team profile with summaries for each person.
+
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -29,7 +30,10 @@ A Node.js command-line application that takes quickly intakes information about 
 
 *Instructions and, if applicable, examples for use.:*
 Via node js
-![Alt text for your video](https://drive.google.com/file/d/1A9XhwivEVUkercLYY3ok-9-cUUaOdm3a/view "View Usage Video!")
+
+## Preview
+![alt preview](assets/screenshot.PNG) 
+![Alt text for your video](assets/ApplicationDemo.WEBM)
 ---
 
 ## Tests
