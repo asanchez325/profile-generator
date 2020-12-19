@@ -2,7 +2,7 @@ const createProfile = profile => {
 const createManager = manager => {
     console.log(manager.getName());
     return `
-<div class="card employee-card">
+<div class="card">
     <div class="card-header">
         <h2 class="card-role-manager">${manager.getRole()}</h2> 
         <h1>${manager.getName()}</h1>
@@ -21,7 +21,7 @@ const createManager = manager => {
 const createEngineer = engineer => {
     console.log(engineer.getName());
     return `
-<div class="card employee-card">
+<div class="card">
 <div class="card-header">
     <h2 class="card-role-engineer">${engineer.getRole()}</h2>  
     <h1>${engineer.getName()}</h1>
@@ -40,7 +40,7 @@ const createEngineer = engineer => {
 const createIntern = intern => {
     console.log(intern.getName());
     return `
-<div class="card employee card">
+<div class="card">
 <div class="card-header">
     <h2 class="card-role-intern">${intern.getRole()}</h2>
     <h1>${intern.getName()}</h1>
@@ -98,7 +98,7 @@ return `
             </div>
         </div>  
         </div>
-        <footer class="jumbotron"> Vision + Our Team = Excellence </footer>
+        <div class="footer"> Vision + Our Team = Excellence </div>
     </body>
 </html>
 `

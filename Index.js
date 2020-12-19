@@ -214,14 +214,7 @@ const promptIntern = () => {
                         return false;
                     }
                 }
-            },
-//Add Aditional?
-{
-    type: 'confirm',
-    name: 'confirmAddEmployee',
-    message: 'Would you like to enter another Intern?',
-    default: false
-}
+            }
     ])
     
 .then(answers => {
@@ -230,16 +223,41 @@ const promptIntern = () => {
     if(answers.confirmEmployee) {
         return promptIntern();
     } else {
-        return createProfile(teamData);
+        return promptAdditional();
     }
 });
 
 };
 
 
-
+//Add Aditional?
+const promptAdditional = () => {
+    console.log("LET's Keep Adding!'");
+    return inquirer
+    .prompt ([
+        {
+            type: "list",
+            message: "Would you like to add an additional engineer or intern?",
+            name: "employee",
+            choices: [
+                "Engineer",
+                "Intern",
+                "No thanks"]
+            }
+            ])
+        .then(function(userInput) {
+            if(userInput.employee === "Engineer") {
+                return promptEngineer();
+            }
+            if(userInput.employee === "Intern") {
+                return promptIntern();
+           }else {
+            return createProfile(teamData);
+        }
+    })    };
 
 function createProfile () {
-    fs.writeFileSync('./dist/index.html', generatePage(teamData), "utf-8");
+    fs.writeFileSync('./dist/index.html', generatePage(teamData), "utf-8"),
+    console.log(" Your Team Profile has been generated successfully!");
 }
 promptManager()
